@@ -71,7 +71,6 @@ export const BackgroundBeamsWithCollision = ({
       ref={parentRef}
       className={cn(
         'h-screen bg-gradient-to-b from-sky-100 to-yellow-50 dark:from-[#010121] dark:to-black relative flex items-center w-full justify-center overflow-hidden',
-        // h-screen if you want bigger
         className,
       )}
     >
@@ -114,7 +113,7 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number
     }
   }
->(({ parentRef, containerRef, beamOptions = {} }, ref) => {
+>(({ parentRef, containerRef, beamOptions = {} }, _) => {
   const beamRef = useRef<HTMLDivElement>(null)
   const [collision, setCollision] = useState<{
     detected: boolean
@@ -152,7 +151,7 @@ const CollisionMechanism = React.forwardRef<
     const animationInterval = setInterval(checkCollision, 50)
 
     return () => clearInterval(animationInterval)
-  }, [cycleCollisionDetected, containerRef])
+  }, [cycleCollisionDetected, containerRef, parentRef])
 
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
@@ -202,7 +201,7 @@ const CollisionMechanism = React.forwardRef<
         {collision.detected && collision.coordinates && (
           <Explosion
             key={`${collision.coordinates.x}-${collision.coordinates.y}`}
-            className=""
+            className="absolute"
             style={{
               left: `${collision.coordinates.x}px`,
               top: `${collision.coordinates.y}px`,
