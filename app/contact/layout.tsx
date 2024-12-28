@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import DotPattern from '@/components/ui/dot-pattern'
 import { cn } from '@/lib/utils'
@@ -16,7 +15,6 @@ export default function ContactLayout({
         />
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   )
