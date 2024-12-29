@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return (
-    <BackgroundBeamsWithCollision>
+    <BackgroundBeamsWithCollision className="overflow-hidden">
       <Navbar />
       {children}
     </BackgroundBeamsWithCollision>

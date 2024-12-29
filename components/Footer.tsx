@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaGithub, FaInstagram, FaLongArrowAltRight, FaTiktok } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaTiktok } from 'react-icons/fa'
+import { IoIosArrowRoundForward } from 'react-icons/io'
 import { FaXTwitter } from 'react-icons/fa6'
 
 interface FooterProps {
@@ -18,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({
       <div className="flex flex-col items-start space-y-4">
         <Link href={seeMoreLink} className="flex items-center">
           <p className="underline font-bold decoration-sky-600">{seeMoreText}</p>
-          <FaLongArrowAltRight size={25} className="ml-2 mt-0 animate-move-back-and-forth" />
+          <IoIosArrowRoundForward size={25} className="ml-2 mt-0 animate-move-back-and-forth" />
         </Link>
 
         {/* Section Social Media Icons */}

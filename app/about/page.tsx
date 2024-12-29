@@ -9,7 +9,7 @@ const timelineDataAbout = [
     title: 'About Me.',
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
           The power of first impressions cannot be underestimated, and the gateway to capitalizing
           on them lies in exceptional website design. An outstanding website transcends mere
           aesthetics and extends its influence to encompass seamless functionality and user-friendly
@@ -26,7 +26,7 @@ const timelineDataAbout = [
     title: 'Product',
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
           While I may not fit the conventional mold of a product manager, my diverse skill set in
           research, product design, and product coordination empowers me to drive the growth of a
           product from its inception. As an exceptional analytical thinker, I possess the ability to
@@ -41,7 +41,7 @@ const timelineDataAbout = [
     title: 'Design',
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
           Despite not fitting the typical designer stereotype, my exceptional visual abilities
           enable me to excel as a presenter, effectively conveying design concepts to stakeholders
           and design teams. I possess a remarkable aptitude for conceptualization, allowing me to
@@ -119,7 +119,7 @@ const timelineDataMyPhotocromicLens = [
     title: 'My Photochromic Lens.',
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal ">
           This is an intensive curation of the photochromic lenses that stand out and the ones I
           personally love. Note: This is just a personal preference.
         </p>
@@ -130,17 +130,17 @@ const timelineDataMyPhotocromicLens = [
 
 export default function About() {
   return (
-    <div className="flex pt-32 flex-col items-center justify-center min-h-screen px-0 sm:px-4 md:px-12 lg:px-24">
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-10">
-        <h1 className="text-3xl font-bold text-left mb-8 md:ml-20 ml-5">About.</h1>
-      </div>
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-10">
+    <div className="h-screen flex flex-col justify-center items-center px-6 sm:px-8 md:px-16 lg:px-24">
+      <div className="min-h-screen mt-28  py-16 px-6 sm:px-8 md:px-16 lg:px-24">
         <Timeline data={timelineDataAbout} />
         <Timeline data={timelineDataMyReads} />
         <Timeline data={timelineDataMyPlaylist} />
         <Timeline data={timelineDataMyPhotocromicLens} />
+
+        <div className="mt-10">
+          <Footer seeMoreText="Lets Continue To Projects" seeMoreLink="/projects" />
+        </div>
       </div>
-      <Footer seeMoreText="Lets Continue To Projects" seeMoreLink="/projects" />
     </div>
   )
 }

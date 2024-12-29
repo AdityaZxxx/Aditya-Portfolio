@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 py-16 px-6 sm:px-8 md:px-16 lg:px-24">
+    <div className="min-h-screen mt-28  py-16 px-6 sm:px-8 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
           <h1 className="text-3xl font-bold mb-4">Projects.</h1>
@@ -16,7 +16,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 md:mb-20">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
