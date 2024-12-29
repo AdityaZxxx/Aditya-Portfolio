@@ -16,8 +16,8 @@ interface DotPatternProps {
 export function DotPattern({
   width = 16,
   height = 16,
-  x = 0,
-  y = 0,
+  x = 10,
+  y = 10,
   cx = 1,
   cy = 1,
   cr = 1,

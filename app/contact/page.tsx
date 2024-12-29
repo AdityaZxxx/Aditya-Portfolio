@@ -53,7 +53,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 sm:px-8 md:px-16 lg:px-24">
+    <div className="flex flex-col pt-28 items-center justify-center min-h-screen px-6 sm:px-8 md:px-16 lg:px-24">
       <div className="w-full max-w-xl mt-20">
         <h1 className="text-3xl font-bold">Contact.</h1>
         <p className="text-neutral-600 dark:text-neutral-200 mt-2">
@@ -112,13 +112,15 @@ export default function Contact() {
             )}
           </div>
 
-          <ShinyButton type="submit" disabled={isLoading}>
+          <ShinyButton style={{ width: '100%' }} type="submit" disabled={isLoading}>
             {isLoading ? 'Sending...' : 'Send Message'}
           </ShinyButton>
         </form>
-      </div>
 
-      <Footer seeMoreText="Go Back Home" seeMoreLink="/" />
+        <div className="mt-2">
+          <Footer seeMoreText="Go Back Home" seeMoreLink="/" />
+        </div>
+      </div>
     </div>
   )
 }
