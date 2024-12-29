@@ -117,7 +117,7 @@ export default function Contact() {
           </ShinyButton>
         </form>
 
-        <div className="mt-2">
+        <div className="mt-8">
           <Footer seeMoreText="Go Back Home" seeMoreLink="/" />
         </div>
       </div>
