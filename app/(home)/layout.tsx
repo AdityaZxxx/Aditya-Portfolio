@@ -1,6 +1,8 @@
 // app/(home)/layout.tsx
+
 import Navbar from '@/components/Navbar'
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision'
+
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

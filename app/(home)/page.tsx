@@ -5,7 +5,7 @@ import Link from 'next/link'
 const words = [
   {
     text: 'Hello,',
-    className: 'text-2xl sm:text-4xl lg:text-5xl xl:text-6xl',
+    className: ' text-2xl sm:text-4xl lg:text-5xl xl:text-6xl',
   },
   {
     text: 'I am',
@@ -23,19 +23,19 @@ const words = [
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col justify-between px-6 sm:px-8 md:px-16 lg:px-24">
+    <div className="h-screen flex flex-col justify-between px-4 sm:px-10 md:px-20 lg:px-32">
       {/* Content Section */}
       <div className="flex-1 flex flex-col justify-center sm:mb-10 sm:mt-28 md:pt-10">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center">
-          <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-lg">
+          <p className="text-neutral-600 dark:text-neutral-200 font-light text-base sm:text-lg">
             The road to freedom starts from here
           </p>
-          <TypewriterEffectSmooth words={words} smallScreenCursorClassName="bg-red-500 h-8" />
+          <TypewriterEffectSmooth words={words} smallScreenCursorClassName="bg-red-500 h-6" />
         </div>
 
         {/* Text Content */}
-        <div className="text-neutral-600 dark:text-neutral-200 text-base sm:text-lg max-w-3xl mx-auto">
+        <div className="text-neutral-600 dark:text-neutral-200 font-light  max-w-3xl mx-auto">
           <p className="mb-2 mt-0">
             Get the best advice from our experts, including expert artists, painters, marathon
             enthusiasts, and RDX, totally free.
