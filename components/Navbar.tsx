@@ -24,7 +24,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`absolute z-10 top-4 md:top-6 left-1/2 transform -translate-x-1/2 w-full max-w-4xl shadow-lg duration-500 dark:shadow-gray-900 flex justify-center items-center py-2 px-5 transition-all rounded-md border border-gray-200 dark:border-gray-700`}
+      className={`absolute z-10 top-4 md:top-6 left-1/2 transform -translate-x-1/2 w-full max-w-4xl shadow-lg bg-white dark:bg-gray-950 duration-500 dark:shadow-gray-900 flex justify-center items-center py-2 px-5 transition-all md:rounded-b-xl sm:rounded-none border border-gray-200 dark:border-gray-700 ${
+        isOpen ? '' : ''
+      }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -44,7 +46,7 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-gray-600 dark:text-gray-300 flex items-center duration-500 hover:scale-110 ${
+                  className={`text-gray-800 dark:text-gray-300 flex items-center duration-500 hover:scale-110 ${
                     pathname === item.href
                       ? 'underline text-gray-900 dark:text-white' // Highlight active link
                       : 'relative text-black hover:text-gray-400 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]'
