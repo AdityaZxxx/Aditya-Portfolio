@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <BackgroundLines className="h-screen w-full">
+    <BackgroundLines>
       <Navbar />
       {children}
     </BackgroundLines>

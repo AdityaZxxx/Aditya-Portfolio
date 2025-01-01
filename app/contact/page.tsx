@@ -71,7 +71,7 @@ export default function Contact() {
               type="text"
               id="name"
               placeholder="Your Name"
-              className="w-full mt-1 p-2 text-black dark:text-neutral-400 bg-white dark:bg-neutral-900  border border-neutral-300 dark:border-neutral-700 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
+              className="w-full mt-1 p-2 text-black dark:text-neutral-400 bg-white dark:bg-gray-950  border border-neutral-300 dark:border-neutral-700 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
             />
             {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
           </div>
@@ -91,7 +91,7 @@ export default function Contact() {
               type="email"
               id="email"
               placeholder="Your Email"
-              className="w-full mt-1 p-2 dark:text-neutral-400 bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
+              className="w-full mt-1 p-2 text-black dark:text-neutral-400 bg-white dark:bg-gray-950  border border-neutral-300 dark:border-neutral-700 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
             />
             {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
           </div>
@@ -105,7 +105,7 @@ export default function Contact() {
               id="message"
               rows={4}
               placeholder="Your Message"
-              className="w-full mt-1 p-2 dark:text-neutral-400 bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent resize-none"
+              className="w-full mt-1 p-2 text-black dark:text-neutral-400 bg-white dark:bg-gray-950  border border-neutral-300 dark:border-neutral-700 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
             />
             {errors.message && (
               <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
@@ -113,7 +113,7 @@ export default function Contact() {
           </div>
 
           <ShinyButton style={{ width: '100%' }} type="submit" disabled={isLoading}>
-            {isLoading ? 'Sending...' : 'Send Message'}
+            {isLoading ? 'Sending...' : <strong>send message</strong>}
           </ShinyButton>
         </form>
 

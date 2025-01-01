@@ -138,7 +138,7 @@ export default function About() {
               <p className="text-sm font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300">
                 About Me.
               </p>
-              <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl lg:text-5xl">
+              <h2 className="mt-6  text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl lg:text-5xl">
                 Let&apos;s get to know me
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-gray-700 dark:text-gray-300 lg:text-xl lg:leading-8">

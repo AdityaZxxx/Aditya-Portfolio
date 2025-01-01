@@ -16,8 +16,8 @@ export default function ContactLayout({
   return (
     <div className="overflow-auto">
       <DotPattern
-        cr={0.5}
-        className={cn('[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]')}
+        cr={1}
+        className={cn('[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]')}
       />
       <Navbar />
       {children}
