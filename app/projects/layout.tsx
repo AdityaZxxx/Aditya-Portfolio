@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 
 export default function ProjectsLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <>
+    <div>
       <Navbar />
       {children}
-    </>
+    </div>
   )
 }

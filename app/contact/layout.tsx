@@ -14,13 +14,13 @@ export default function ContactLayout({
   children: React.ReactNode
 }>) {
   return (
-    <body className="overflow-auto">
+    <div className="overflow-auto">
       <DotPattern
         cr={0.5}
         className={cn('[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]')}
       />
       <Navbar />
       {children}
-    </body>
+    </div>
   )
 }

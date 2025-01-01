@@ -1,7 +1,7 @@
 'use client'
 
 import Footer from '@/components/Footer'
-import { Timeline } from '@/components/ui/timeline'
+import { TiArrowDown, TiArrowRight } from 'react-icons/ti'
 // import Image from 'next/image'
 
 const timelineDataAbout = [
@@ -132,10 +132,87 @@ export default function About() {
   return (
     <div className="h-screen flex flex-col justify-center items-center px-6 sm:px-8 md:px-16 lg:px-24">
       <div className="min-h-screen mt-28  py-16 px-6 sm:px-8 md:px-16 lg:px-24">
-        <Timeline data={timelineDataAbout} />
-        <Timeline data={timelineDataMyReads} />
-        <Timeline data={timelineDataMyPlaylist} />
-        <Timeline data={timelineDataMyPhotocromicLens} />
+        <section className="bg-transparent py-12 sm:py-16 lg:py-20 xl:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <p className="text-sm font-bold uppercase tracking-widest text-gray-700 dark:text-gray-300">
+                About Me.
+              </p>
+              <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl lg:text-5xl">
+                Let&apos;s get to know me
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-gray-700 dark:text-gray-300 lg:text-xl lg:leading-8">
+                Here are some summaries of me
+              </p>
+            </div>
+            <ul className="mx-auto mt-12 grid max-w-md grid-cols-1 gap-10 sm:mt-16 lg:mt-20 lg:max-w-5xl lg:grid-cols-4">
+              <li className="flex-start group relative flex lg:flex-col">
+                <span
+                  className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
+                  aria-hidden="true"
+                ></span>
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                  <TiArrowDown className="h-8 w-8 text-gray-600 group-hover:text-white hidden sm:block" />
+                  <TiArrowRight className="h-8 w-8 text-gray-600 group-hover:text-white sm:hidden block" />
+                </div>
+                <div className="ml-6 lg:ml-0 lg:mt-10">
+                  <h3 className="text-xl font-bold dark:text-gray-300 text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                    {timelineDataAbout[0].title}
+                  </h3>
+                  <h4 className="mt-2 text-base text-gray-700">{timelineDataAbout[0].content}</h4>
+                </div>
+              </li>
+              <li className="flex-start group relative flex lg:flex-col">
+                <span
+                  className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
+                  aria-hidden="true"
+                ></span>
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                  <TiArrowDown className="h-8 w-8 text-gray-600 group-hover:text-white hidden sm:block" />
+                  <TiArrowRight className="h-8 w-8 text-gray-600 group-hover:text-white sm:hidden block" />
+                </div>
+                <div className="ml-6 lg:ml-0 lg:mt-10">
+                  <h3 className="text-xl font-bold dark:text-gray-300 text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                    {timelineDataMyReads[0].title}
+                  </h3>
+                  <h4 className="mt-2 text-base text-gray-700">{timelineDataMyReads[0].content}</h4>
+                </div>
+              </li>
+              <li className="flex-start group relative flex lg:flex-col">
+                <span
+                  className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
+                  aria-hidden="true"
+                ></span>
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                  <TiArrowDown className="h-8 w-8 text-gray-600 group-hover:text-white hidden sm:block" />
+                  <TiArrowRight className="h-8 w-8 text-gray-600 group-hover:text-white sm:hidden block" />
+                </div>
+                <div className="ml-6 lg:ml-0 lg:mt-10">
+                  <h3 className="text-xl font-bold dark:text-gray-300 text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                    {timelineDataMyPlaylist[0].title}
+                  </h3>
+                  <h4 className="mt-2 text-base text-gray-700">
+                    {timelineDataMyPlaylist[0].content}
+                  </h4>
+                </div>
+              </li>
+              <li className="flex-start group relative flex lg:flex-col">
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                  <TiArrowDown className="h-8 w-8 text-gray-600 group-hover:text-white hidden sm:block" />
+                  <TiArrowRight className="h-8 w-8 text-gray-600 group-hover:text-white sm:hidden block" />
+                </div>
+                <div className="ml-6 lg:ml-0 lg:mt-10">
+                  <h3 className="text-xl font-bold dark:text-gray-300 text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+                    {timelineDataMyPhotocromicLens[0].title}
+                  </h3>
+                  <h4 className="mt-2 text-base text-gray-700">
+                    {timelineDataMyPhotocromicLens[0].content}
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
 
         <div className="mt-10">
           <Footer seeMoreText="Lets Continue To Projects" seeMoreLink="/projects" />

@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
-import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision'
+import { BackgroundLines } from '@/components/ui/background-lines'
+
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -9,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function AboutLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <BackgroundBeamsWithCollision className="overflow-auto">
+    <BackgroundLines className="h-screen w-full">
       <Navbar />
       {children}
-    </BackgroundBeamsWithCollision>
+    </BackgroundLines>
   )
 }
